@@ -30,5 +30,13 @@ namespace LemonadeStand
             Console.WriteLine($"Your recipe currently consists of:\n{numberOfLemons} lemons per pitcher\n{numberOfSugarCubes} sugar cubes per pitcher\n{numberOfIceCubes} ice cubes per pitcher");
         }
 
+        public void CustomizeRecipe(int lemons, int sugar, int ice, double pricePerCup)
+        {
+            numberOfLemons = lemons;
+            numberOfSugarCubes = sugar;
+            numberOfIceCubes = ice;
+            price = pricePerCup;
+          
+        }
     }
 }

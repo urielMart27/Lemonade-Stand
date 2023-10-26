@@ -47,7 +47,7 @@ namespace LemonadeStand
                 case "4":
                     store.SellCups(this);
                     break;
-                  default;
+                default:
                     Console.WriteLine("Exiting store...");
                     break;
 
