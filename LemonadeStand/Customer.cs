@@ -8,37 +8,19 @@ namespace LemonadeStand
 {
     internal class Customer
     {
-        int thirstLevel;
-        double budget;
+        double willingnesstopay;
 
         public Customer()
         {
-            thirstLevel = new Random().Next(1, 10);
-            budget = new Random().Next(1, 20);
-
+            Random random = new Random();
+            willingnesstopay = random.Next(50, 101) / 100.0;
         }
-        public int GetThirstLevel()
+
+        public bool WillBuyLemonade(double price)
         {
-            return thirstLevel;
+            return willingnesstopay <= price;
         }
-        public double GetBudget()
-        {
-            return budget;
-        }
-        public bool CustomerDecision(double lemonadeprice, Weather weather)
-        {
-            double maxPriceForCustomer = GetBudget();
-
-                if (lemonadeprice <= maxPriceForCustomer)
-            {
-                return true;
-            }
-            return false;
-           
-
-
-
-
-        }
+      
+        
     }
 }
