@@ -14,6 +14,7 @@ namespace LemonadeStand
         public List<IceCube> iceCubes;
         public List<Cup> cups;
 
+
         // constructor (SPAWNER)
         public Inventory()
         {

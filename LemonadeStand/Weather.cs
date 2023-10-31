@@ -12,7 +12,6 @@ namespace LemonadeStand
        public string condition;
        public int temperature;
        public List<string> weatherconditions;
-       string predictedForecast;
 
         public Weather()
         {
@@ -21,23 +20,21 @@ namespace LemonadeStand
                 "Sunny","Cloudy", "Rainy",
             };
             condition = GenerateWeather();
-            predictedForecast = GenerateForecast();
             temperature = GenerateTemperature();
         }
         public string GenerateForecast()
         {
             
             Random random = new Random();
-            int index = random.Next(weatherconditions.Count);
-            predictedForecast =weatherconditions[index];
-            return predictedForecast;
+            return weatherconditions[random.Next(weatherconditions.Count)];
         }
 
         public string GenerateWeather()
         {
             Random random = new Random();
             int index = random.Next(weatherconditions.Count);
-            return weatherconditions[index];
+            condition = weatherconditions[index];
+            return condition;
 
         }
         private int GenerateTemperature()

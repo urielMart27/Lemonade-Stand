@@ -9,13 +9,15 @@ namespace LemonadeStand
     class IceCube : Item
     {
         // member variables (HAS A)
-
+        string name;
         // constructor (SPAWNER)
         public IceCube()
         {
             name = "ice cube";
+           
         }
 
         // member methods (CAN DO)
+      
     }
 }

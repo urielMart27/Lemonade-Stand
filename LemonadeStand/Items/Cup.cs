@@ -9,13 +9,17 @@ namespace LemonadeStand
     class Cup : Item
     {
         // member variables (HAS A)
-
+        string name;
         // constructor (SPAWNER)
         public Cup()
         {
-            name = "cup";
+           name = "cup";
         }
 
         // member methods (CAN DO)
+       
+
+      
     }
+   
 }

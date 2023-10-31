@@ -9,7 +9,7 @@ namespace LemonadeStand
     class SugarCube : Item
     {
         // member variables (HAS A)
-
+        string name;
         // constructor (SPAWNER)
         public SugarCube()
         {

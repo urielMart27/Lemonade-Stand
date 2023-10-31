@@ -31,18 +31,30 @@ namespace LemonadeStand
         }
         public void RunGame()
         {
+           
+
             while (currentday < days.Count)
             {
                 Console.WriteLine($"Day {currentday + 1}");
+
+                Console.WriteLine("Inventory:");
+                Console.WriteLine($"Lemons: {player.inventory.lemons.Count}");
+                Console.WriteLine($"Sugar Cubes: {player.inventory.sugarCubes.Count}");
+                Console.WriteLine($"Ice Cubes: {player.inventory.iceCubes.Count}");
+                Console.WriteLine($"Cups: {player.inventory.cups.Count}");
+
                 Console.WriteLine("Press Enter to start the day...");
                 Console.ReadLine();
 
                 Day currentDayObject = days[currentday];
 
+
                 currentDayObject.StartDay(player);
                 currentday++;
             }
             Console.WriteLine("End of Week!");
+
+         
         }
     }
 }

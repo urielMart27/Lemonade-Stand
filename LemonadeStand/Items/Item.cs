@@ -10,14 +10,15 @@ namespace LemonadeStand
     abstract class Item
     {
         // member variables (HAS A)
-        public string name;
+        public string name { get; protected set; }
 
         // constructor (SPAWNER)
-        static Item
+        protected Item(string itemname = "item")
         {
-           
+            name = itemname;
+        
         }
-
+      
         // member methods (CAN DO)
     }
 }
